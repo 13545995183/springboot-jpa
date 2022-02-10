@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>钱多多</title>
+</head>
+<body>
+<div th:utext="${msg}"></div>
+<div >
+    <p th:text="${user.username}"></p>
+    <p th:text="${user.age}"></p>
+    <p th:text="${user.phone}"></p>
+</div>
+<div th:object="${user}" th:class="active">
+    <p th:text="*{username}"></p>
+    <p th:text="*{age}"></p>
+    <p th:text="*{phone}"></p>
+</div>
+<input type="test" th:value="${user.username}">
+<div th:text="${user.username}" th:style="'color:'+(${user.sex}=='女'?'blue':'red')"></div>
+<div th:text="${#dates.format(time,'YYYY-MM-DD hh:mm:ss')}" ></div>
+<div th:text="${#session.getAttribute('role')}" ></div>
+</body>
+</html>

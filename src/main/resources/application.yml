@@ -1,0 +1,27 @@
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.98.163.53:3306/eladmin?useUnicode=true&characterEncoding=utf-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: root
+  #redis配置
+  redis:
+    host: 127.0.0.1
+    #端口号
+    port: 6379
+    database: 1
+    pool:
+      #连接池最大数量
+      max-active: 50
+      #连接池最大阻塞等待时间
+      max-wait: 1500
+      #连接池最大空闲连接数
+      max-idle: 20
+      #连接池最小空闲连接数
+      min-idle: 2
+    #超时时间
+    timeout: 5000
