@@ -1,4 +1,4 @@
-package com.example.springbootthymeleaf;
+package com.example.springbootthymeleaf.Test;
 
 import com.example.springbootthymeleaf.Dao.EmployeeDao;
 import com.example.springbootthymeleaf.entity.Employee;

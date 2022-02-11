@@ -1,16 +1,12 @@
 package com.example.springbootthymeleaf.entity;
 
-import jdk.nashorn.internal.objects.annotations.Getter;
-import jdk.nashorn.internal.objects.annotations.Setter;
+import org.springframework.data.redis.core.RedisHash;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
-@Entity
-@Table
-public class Employee implements Serializable {
+@RedisHash(value="employee")
+public class EmployeeRedis {
     @Id
-    @GeneratedValue
     private Integer id;
 
     @Column
