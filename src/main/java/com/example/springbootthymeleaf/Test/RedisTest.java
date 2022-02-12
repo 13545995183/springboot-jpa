@@ -40,5 +40,8 @@ public class RedisTest {
             EmployeeRedis e=iterator.next();
             System.out.println(e.getId()+"  "+e.getName()+"  "+e.getAge()+"  "+e.getGender());
         }
+        System.out.println("--------------------");
+        EmployeeRedis e=employeeDao.findById(2094650352).get();
+        System.out.println(e.getId()+"  "+e.getName()+"  "+e.getAge()+"  "+e.getGender());
     }
 }
