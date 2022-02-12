@@ -25,3 +25,9 @@ spring:
       min-idle: 2
     #超时时间
     timeout: 5000
+
+  #security配置账户和密码
+  security:
+    user:
+      name: admin
+      password: admin
