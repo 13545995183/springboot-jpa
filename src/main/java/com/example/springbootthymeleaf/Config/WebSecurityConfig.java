@@ -1,15 +1,12 @@
 package com.example.springbootthymeleaf.Config;
 
+import org.apache.tomcat.util.buf.UEncoder;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.builders.WebSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 /*Security配置类*/
-@Configuration
-@EnableWebSecurity
-public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+//@Configuration
+//@EnableWebSecurity
+//public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 /*    protected void config(HttpSecurity httpSecurity)throws Exception{
         //配置所有请求都可以访问
         //httpSecurity.authorizeRequests().anyRequest().permitAll();
@@ -18,11 +15,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         //可以通过and进行连接
         httpSecurity.authorizeRequests().anyRequest().permitAll().and().headers().frameOptions().sameOrigin();
     }*/
-    protected void config(WebSecurity security){
+/*    protected void config(WebSecurity security){
         //释放静态资源
         security.ignoring().antMatchers("/css/**","/js/**","/templates/**");
-    }
-    protected void configure(HttpSecurity security)throws Exception{
+    }*/
+    /*protected void configure(HttpSecurity security)throws Exception{
         //配置认证
         security.formLogin()
                 //登陆页面路径配置
@@ -50,5 +47,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and().headers().frameOptions().sameOrigin()
                 //取消组织跨站请求伪造，否则造成开发不便利
                 .and().csrf().disable();
-    }
-}
+    }*/
+    //配置明文账户密码
+/*    protected void config(AuthenticationManagerBuilder auth)throws  Exception{
+        auth.inMemoryAuthentication()
+                .passwordEncoder(UEncoder)
+                .withUser("aaa").password("111")
+                .and()
+                .withUser("bbb").password("111");
+    }*/
+//}
