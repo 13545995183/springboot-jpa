@@ -7,5 +7,5 @@ public interface EmployeeDao extends JpaRepository<Employee,Integer> {
 
     Employee findByGender(String gender);
 
-    //void updateOne(Employee employee);
+    //void updateOne(Employee );
 }

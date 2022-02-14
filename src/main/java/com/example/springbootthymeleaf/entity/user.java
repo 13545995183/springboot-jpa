@@ -1,10 +1,29 @@
 package com.example.springbootthymeleaf.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table
 public class user {
+    @Id
+    @Column(name = "id", nullable = false)
+    private Integer id;
+
     private String username;
     private int age ;
     private String phone;
     private String sex;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public user(String username, int age, String phone,String sex) {
         this.username = username;

@@ -13,4 +13,8 @@ public class LoginController {
     public String loginError(){
         return "loginError";
     }
+    @GetMapping("show")
+    public String show(){
+        return "show";
+    }
 }
