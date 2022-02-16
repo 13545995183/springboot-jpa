@@ -1,0 +1,18 @@
+package com.example.springbootthymeleaf.Test;
+
+import org.quartz.JobExecutionContext;
+import org.quartz.JobExecutionException;
+import org.springframework.scheduling.quartz.QuartzJobBean;
+
+public class JobTest3 extends QuartzJobBean {
+    @Override
+    protected void executeInternal(JobExecutionContext context) throws JobExecutionException {
+        System.out.println("Job3开始线程："+Thread.currentThread().getId());
+        try{
+            Thread.sleep(1000);
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
+        System.out.println("Job3结束线程："+Thread.currentThread().getId());
+    }
+}

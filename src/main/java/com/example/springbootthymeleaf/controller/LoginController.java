@@ -1,5 +1,6 @@
 package com.example.springbootthymeleaf.controller;
 
+import com.example.springbootthymeleaf.Test.JobTest1;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -14,7 +15,9 @@ public class LoginController {
         return "loginError";
     }
     @GetMapping("show")
-    public String show(){
-        return "show";
+    public void show(){
+
+
+        //return "show";
     }
 }
