@@ -1,0 +1,21 @@
+server:
+  port: 8088
+spring:
+  profiles:
+    #配置服务器是以"native" profile运行
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          #应用程序数据所在的文件目录
+          search-locations: file:///Users/qiansheng/Downloads/springboot-jpa/SpringCloud-Confsvr-Demo/src/main/resources/config/licentsingservice
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      #url: jdbc:mysql://42.192.202.15:3306/kpi?useUnicode=true&characterEncoding=utf-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
+      #username: kpi
+      #password: qg3lchqefV5UNWyQj7
+      url: jdbc:mysql://47.98.163.53:3306/eladmin?useUnicode=true&characterEncoding=utf-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull
+      username: root
+      password: root

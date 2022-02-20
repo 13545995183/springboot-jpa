@@ -1,0 +1,15 @@
+server:
+  port: 8888
+eureka:
+  instance:
+    hostname: eureka-center
+    appname: 注册中心
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      #Eureka服务地址
+      defaultZone: http://localhost:8888/eureka
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 4000
