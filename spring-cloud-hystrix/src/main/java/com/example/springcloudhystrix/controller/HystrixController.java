@@ -1,6 +1,7 @@
 package com.example.springcloudhystrix.controller;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import org.apache.log4j.Logger;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
