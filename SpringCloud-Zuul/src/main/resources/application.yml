@@ -1,3 +1,13 @@
-zuul:
-  routes:
-    organizationservice: /organization/**
+server:
+  port: 8086
+spring:
+  application:
+    name: zuul-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8798/eureka/
+    # 表示eureka client间隔多久去拉取服务注册信息
+    registry-fetch-interval-seconds: 5
+  instance:
+    instance_id: ${spring.cloud.client.hostname}:${server.port}:${spring.application.name}:@project.version@
