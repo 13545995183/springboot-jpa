@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <h1>{{ message }}</h1>
+    <table id="table">
+        <tr></tr>
+    </table>
+    <button v-on:click="change">修改</button>
+</div>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!'
+        },
+        method:{
+            change: function (){
+                this.message="修改"
+            }
+        }
+    })
+</script>
+</body>
+</html>
